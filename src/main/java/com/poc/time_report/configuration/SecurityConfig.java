@@ -1,11 +1,11 @@
 package com.poc.time_report.configuration;
 
-import static com.poc.time_report.utils.SampleData.SAMPLE_ADMIN_USERNAME;
-import static com.poc.time_report.utils.SampleData.SAMPLE_EMPLOYEE_NAME;
-import static com.poc.time_report.utils.SampleData.SAMPLE_PASSWORD_ADMIN;
-import static com.poc.time_report.utils.SampleData.SAMPLE_PASSWORD_USER;
-import static com.poc.time_report.utils.SampleData.SAMPLE_ROLE_ADMIN;
-import static com.poc.time_report.utils.SampleData.SAMPLE_ROLE_USER;
+import static com.poc.time_report.utils.Constants.SAMPLE_ADMIN_USERNAME;
+import static com.poc.time_report.utils.Constants.SAMPLE_EMPLOYEE_NAME;
+import static com.poc.time_report.utils.Constants.SAMPLE_PASSWORD_ADMIN;
+import static com.poc.time_report.utils.Constants.SAMPLE_PASSWORD_USER;
+import static com.poc.time_report.utils.Constants.SAMPLE_ROLE_ADMIN;
+import static com.poc.time_report.utils.Constants.SAMPLE_ROLE_USER;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -3,7 +3,7 @@ package com.poc.time_report.utils;
 import lombok.experimental.UtilityClass;
 
 @UtilityClass
-public class SampleData {
+public class Constants {
 
   public static final String SAMPLE_EMPLOYEE_NAME = "user";
   public static final String SAMPLE_PASSWORD_USER = "user";
