@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  postgres_db:
+    image: postgres:14.6
+    container_name: xphr_database
+    restart: always
+    environment:
+      - POSTGRES_USER=xhpr_user
+      - POSTGRES_PASSWORD=J7YCr8ncR
+      - POSTGRES_DB=xhpr_testing
+    volumes:
+      - postgres_db:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+volumes:
+  postgres_db:
+    driver: local
