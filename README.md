@@ -24,7 +24,6 @@
     ```bash
     ./gradlew bootRun 
     ```
-   // run with dev profiles
 6. **Access the Application**:
 7. Open a web browser and navigate to `http://localhost:8080/report` to access the reporting page.
 8. Access the application using the credentials:
