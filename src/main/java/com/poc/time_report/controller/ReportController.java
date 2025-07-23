@@ -1,10 +1,13 @@
 package com.poc.time_report.controller;
 
+import static com.poc.time_report.utils.SecurityUtils.isCurrentUserAdmin;
+
 import com.poc.time_report.dto.ReportDTO;
 import com.poc.time_report.dto.ReportProjection;
 import com.poc.time_report.repository.TimeRecordRepository;
 import java.security.Principal;
 import java.time.LocalDateTime;
+import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -32,8 +35,7 @@ public class ReportController {
       Principal principal,
       Model model) {
 
-    // Provide default dates if none are provided
-    if (startDate == null || endDate == null) {
+    if (Objects.isNull(startDate) || Objects.isNull(endDate)) {
       startDate = LocalDateTime.now().minusMonths(1);
       endDate = LocalDateTime.now();
     }
@@ -59,12 +61,5 @@ public class ReportController {
     model.addAttribute("totalPages", reportPage.getTotalPages());
     model.addAttribute("currentPage", page);
     return ajax ? "report_table" : "work_hours_report";
-  }
-
-  private boolean isCurrentUserAdmin() {
-    return SecurityContextHolder.getContext().getAuthentication()
-        .getAuthorities()
-        .stream()
-        .anyMatch(grantedAuthority -> grantedAuthority.getAuthority().equals("ROLE_ADMIN"));
   }
 }
