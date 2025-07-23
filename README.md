@@ -63,14 +63,6 @@
    - Pagination is implemented to handle large datasets efficiently.
    - The backend is expected to return paginated results when requested.
 
-5. **Security**:
-   - Input validation and sanitization are performed on the server side to prevent SQL injection and other vulnerabilities.
-   - The page uses HTTPS for secure communication.
-
-6. **Styling and Responsiveness**:
-   - The page uses Bootstrap 5 for styling and ensures responsiveness across different devices.
-   - The design prioritizes simplicity and usability.
-
 ## Security notes:
 
 1. **UserDetailsService**: A custom `UserDetailsService` is configured to load user details (e.g., username, password, roles) from the database or another source.
@@ -81,4 +73,4 @@
    - Public endpoints (e.g., login) are accessible to everyone.
    - Restricted endpoints (e.g., `/report`) require specific roles (e.g., `ROLE_ADMIN` or `ROLE_USER`).
 
-5. **Authentication and Authorization**: Spring Security automatically checks the user's roles during authentication and ensures they have the required permissions to access specific resources.
+
